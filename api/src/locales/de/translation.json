@@ -1,0 +1,140 @@
+{
+  "common": {
+    "success": "Erfolg",
+    "notFound": "Ressource nicht gefunden",
+    "badRequest": "Ungültige Anfrage",
+    "unauthorized": "Authentifizierung erforderlich",
+    "forbidden": "Sie haben keine Berechtigung für diese Aktion",
+    "serverError": "Ein unerwarteter Fehler ist aufgetreten. Bitte später erneut versuchen.",
+    "invalidId": "Ungültige Kennung",
+    "required": "{{field}} ist erforderlich"
+  },
+  "validation": {
+    "failed": "Validierung fehlgeschlagen",
+    "invalidBody": "Der Anfrageinhalt ist ungültig"
+  },
+  "auth": {
+    "unauthorized": "Authentifizierung erforderlich",
+    "invalidToken": "Ungültiges oder abgelaufenes Sitzungstoken",
+    "invalidCredentials": "Ungültige E-Mail oder ungültiges Passwort",
+    "accountInactive": "Dieses Konto ist inaktiv",
+    "passwordChanged": "Passwort erfolgreich geändert",
+    "resetRequested": "Falls diese E-Mail existiert, wurde ein Link zum Zurücksetzen gesendet",
+    "resetCompleted": "Passwort zurückgesetzt. Sie können sich jetzt anmelden.",
+    "invalidResetToken": "Das Reset-Token ist ungültig oder abgelaufen",
+    "emailVerified": "E-Mail erfolgreich bestätigt",
+    "userExists": "Ein Konto mit dieser E-Mail existiert bereits",
+    "tokenRequired": "Ein Token ist erforderlich",
+    "logoutSuccess": "Abmeldung erfolgreich",
+    "oldPasswordIncorrect": "Ihr aktuelles Passwort ist falsch"
+  },
+  "user": {
+    "notFound": "Benutzer nicht gefunden",
+    "emailExists": "Ein Benutzer mit dieser E-Mail existiert bereits",
+    "created": "Benutzer erfolgreich erstellt",
+    "updated": "Benutzer aktualisiert",
+    "deleted": "Benutzer entfernt",
+    "restored": "Benutzer wiederhergestellt",
+    "roleChanged": "Rollen aktualisiert"
+  },
+  "org": {
+    "notFound": "Organisation nicht gefunden",
+    "created": "Organisation erstellt",
+    "updated": "Organisation aktualisiert",
+    "slugExists": "Eine Organisation mit diesem Slug existiert bereits",
+    "settingsSaved": "Organisationseinstellungen gespeichert"
+  },
+  "role": {
+    "notFound": "Rolle nicht gefunden",
+    "keyExists": "Eine Rolle mit diesem Schlüssel existiert bereits",
+    "systemRoleLocked": "Systemrollen können nicht geändert werden"
+  },
+  "dept": {
+    "notFound": "Abteilung nicht gefunden",
+    "nameExists": "Eine Abteilung mit diesem Namen existiert bereits",
+    "hasChildren": "Die Abteilung hat Unterabteilungen und kann nicht gelöscht werden"
+  },
+  "team": {
+    "notFound": "Team nicht gefunden",
+    "memberAdded": "Mitglied zum Team hinzugefügt",
+    "memberRemoved": "Mitglied aus Team entfernt"
+  },
+  "goal": {
+    "notFound": "Ziel nicht gefunden",
+    "noAccess": "Sie haben keinen Zugriff auf dieses Ziel",
+    "created": "Ziel erstellt",
+    "updated": "Ziel aktualisiert",
+    "deleted": "Ziel gelöscht",
+    "checkinAdded": "Check-in erfasst",
+    "keyResultNotFound": "Schlüsselergebnis nicht gefunden",
+    "cascadeNotAllowed": "Das Ziel kann nicht unter sich selbst ausgerichtet werden"
+  },
+  "kpi": {
+    "notFound": "KPI nicht gefunden",
+    "entryAdded": "KPI-Eintrag erfasst",
+    "entryNotFound": "KPI-Eintrag nicht gefunden"
+  },
+  "cycle": {
+    "notFound": "Bewertungszyklus nicht gefunden",
+    "activeExists": "Ein aktiver Zyklus des gleichen Zeitraums existiert bereits",
+    "cannotClose": "Der Zyklus kann nicht geschlossen werden",
+    "statusChanged": "Zyklusstatus aktualisiert"
+  },
+  "template": {
+    "notFound": "Bewertungsvorlage nicht gefunden",
+    "hasQuestions": "Die Vorlage enthält bereits Fragen",
+    "questionNotFound": "Frage nicht gefunden"
+  },
+  "review": {
+    "notFound": "Leistungsbeurteilung nicht gefunden",
+    "notCreated": "Es existiert keine Beurteilung für diesen Benutzer im Zyklus",
+    "notEditable": "Diese Beurteilung kann in ihrem aktuellen Status nicht bearbeitet werden",
+    "alreadySubmitted": "Ihre Bewertung wurde bereits eingereicht",
+    "selfCompleted": "Selbsteinschätzung eingereicht",
+    "submitted": "Bewertung eingereicht",
+    "finalized": "Beurteilung abgeschlossen",
+    "approved": "Beurteilung genehmigt",
+    "signedOff": "Beurteilung unterschrieben",
+    "alreadyParticipant": "Der Benutzer ist bereits Bewerter",
+    "notParticipant": "Sie sind kein Teilnehmer dieser Beurteilung",
+    "statusChanged": "Beurteilungsstatus aktualisiert"
+  },
+  "feedback": {
+    "notFound": "Feedback nicht gefunden",
+    "created": "Feedback geteilt",
+    "cannotFeedbackSelf": "Sie können sich selbst kein Feedback geben"
+  },
+  "plan": {
+    "notFound": "Entwicklungsplan nicht gefunden",
+    "activityNotFound": "Entwicklungsaktivität nicht gefunden",
+    "created": "Entwicklungsplan erstellt"
+  },
+  "competency": {
+    "notFound": "Kompetenz nicht gefunden",
+    "frameworkNotFound": "Kompetenzmodell nicht gefunden",
+    "assessmentSaved": "Kompetenzbewertung gespeichert"
+  },
+  "recognition": {
+    "notFound": "Anerkennung nicht gefunden",
+    "created": "Anerkennung gesendet"
+  },
+  "notification": {
+    "notFound": "Benachrichtigung nicht gefunden",
+    "allRead": "Alle Benachrichtigungen als gelesen markiert"
+  },
+  "report": {
+    "notFound": "Keine Berichtsdaten vorhanden",
+    "exported": "Bericht exportiert"
+  },
+  "admin": {
+    "settingsSaved": "Einstellungen gespeichert",
+    "auditLogEmpty": "Keine Audit-Einträge",
+    "dataExported": "Datencxport abgeschlossen",
+    "dataAnonymized": "Benutzerdaten anonymisiert"
+  },
+  "system": {
+    "ok": "Der Dienst ist betriebsbereit",
+    "unavailable": "Der Dienst ist nicht verfügbar",
+    "notFound": "Route nicht gefunden"
+  }
+}

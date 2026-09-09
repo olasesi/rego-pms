@@ -1,0 +1,140 @@
+{
+  "common": {
+    "success": "Succès",
+    "notFound": "Ressource introuvable",
+    "badRequest": "Requête invalide",
+    "unauthorized": "Authentification requise",
+    "forbidden": "Vous n'avez pas la permission d'effectuer cette action",
+    "serverError": "Une erreur inattendue est survenue. Veuillez réessayer plus tard.",
+    "invalidId": "Identifiant invalide",
+    "required": "{{field}} est requis"
+  },
+  "validation": {
+    "failed": "La validation a échoué",
+    "invalidBody": "Le corps de la requête est invalide"
+  },
+  "auth": {
+    "unauthorized": "Authentification requise",
+    "invalidToken": "Jeton de session invalide ou expiré",
+    "invalidCredentials": "E-mail ou mot de passe invalide",
+    "accountInactive": "Ce compte est inactif",
+    "passwordChanged": "Mot de passe modifié avec succès",
+    "resetRequested": "Si cet e-mail existe, un lien de réinitialisation a été envoyé",
+    "resetCompleted": "Mot de passe réinitialisé. Vous pouvez maintenant vous connecter.",
+    "invalidResetToken": "Le jeton de réinitialisation est invalide ou expiré",
+    "emailVerified": "E-mail vérifié avec succès",
+    "userExists": "Un compte avec cet e-mail existe déjà",
+    "tokenRequired": "Un jeton est requis",
+    "logoutSuccess": "Déconnexion réussie",
+    "oldPasswordIncorrect": "Votre mot de passe actuel est incorrect"
+  },
+  "user": {
+    "notFound": "Utilisateur introuvable",
+    "emailExists": "Un utilisateur avec cet e-mail existe déjà",
+    "created": "Utilisateur créé avec succès",
+    "updated": "Utilisateur mis à jour",
+    "deleted": "Utilisateur supprimé",
+    "restored": "Utilisateur restauré",
+    "roleChanged": "Rôles mis à jour"
+  },
+  "org": {
+    "notFound": "Organisation introuvable",
+    "created": "Organisation créée",
+    "updated": "Organisation mise à jour",
+    "slugExists": "Une organisation avec ce slug existe déjà",
+    "settingsSaved": "Paramètres de l'organisation enregistrés"
+  },
+  "role": {
+    "notFound": "Rôle introuvable",
+    "keyExists": "Un rôle avec cette clé existe déjà",
+    "systemRoleLocked": "Les rôles système ne peuvent pas être modifiés"
+  },
+  "dept": {
+    "notFound": "Département introuvable",
+    "nameExists": "Un département avec ce nom existe déjà",
+    "hasChildren": "Ce département a des sous-départements et ne peut pas être supprimé"
+  },
+  "team": {
+    "notFound": "Équipe introuvable",
+    "memberAdded": "Membre ajouté à l'équipe",
+    "memberRemoved": "Membre retiré de l'équipe"
+  },
+  "goal": {
+    "notFound": "Objectif introuvable",
+    "noAccess": "Vous n'avez pas accès à cet objectif",
+    "created": "Objectif créé",
+    "updated": "Objectif mis à jour",
+    "deleted": "Objectif supprimé",
+    "checkinAdded": "Point de contrôle enregistré",
+    "keyResultNotFound": "Résultat clé introuvable",
+    "cascadeNotAllowed": "Cet objectif ne peut pas être aligné sous lui-même"
+  },
+  "kpi": {
+    "notFound": "KPI introuvable",
+    "entryAdded": "Saisie KPI enregistrée",
+    "entryNotFound": "Saisie KPI introuvable"
+  },
+  "cycle": {
+    "notFound": "Cycle d'évaluation introuvable",
+    "activeExists": "Un cycle actif de la même période existe déjà",
+    "cannotClose": "Le cycle ne peut pas être fermé",
+    "statusChanged": "Statut du cycle mis à jour"
+  },
+  "template": {
+    "notFound": "Modèle d'évaluation introuvable",
+    "hasQuestions": "Le modèle contient déjà des questions",
+    "questionNotFound": "Question introuvable"
+  },
+  "review": {
+    "notFound": "Évaluation de performance introuvable",
+    "notCreated": "Aucune évaluation n'existe pour cet utilisateur dans ce cycle",
+    "notEditable": "Cette évaluation ne peut pas être modifiée dans son état actuel",
+    "alreadySubmitted": "Votre évaluation a déjà été soumise",
+    "selfCompleted": "Auto-évaluation soumise",
+    "submitted": "Évaluation soumise",
+    "finalized": "Évaluation finalisée",
+    "approved": "Évaluation approuvée",
+    "signedOff": "Évaluation signée",
+    "alreadyParticipant": "Cet utilisateur est déjà évaluateur",
+    "notParticipant": "Vous n'êtes pas participant de cette évaluation",
+    "statusChanged": "Statut de l'évaluation mis à jour"
+  },
+  "feedback": {
+    "notFound": "Retour introuvable",
+    "created": "Retour partagé",
+    "cannotFeedbackSelf": "Vous ne pouvez pas envoyer un retour à vous-même"
+  },
+  "plan": {
+    "notFound": "Plan de développement introuvable",
+    "activityNotFound": "Activité de développement introuvable",
+    "created": "Plan de développement créé"
+  },
+  "competency": {
+    "notFound": "Compétence introuvable",
+    "frameworkNotFound": "Référentiel de compétences introuvable",
+    "assessmentSaved": "Évaluation de compétence enregistrée"
+  },
+  "recognition": {
+    "notFound": "Reconnaissance introuvable",
+    "created": "Reconnaissance envoyée"
+  },
+  "notification": {
+    "notFound": "Notification introuvable",
+    "allRead": "Toutes les notifications marquées comme lues"
+  },
+  "report": {
+    "notFound": "Aucune donnée de rapport",
+    "exported": "Rapport exporté"
+  },
+  "admin": {
+    "settingsSaved": "Paramètres enregistrés",
+    "auditLogEmpty": "Aucune entrée d'audit",
+    "dataExported": "Export des données terminé",
+    "dataAnonymized": "Données utilisateur anonymisées"
+  },
+  "system": {
+    "ok": "Le service est opérationnel",
+    "unavailable": "Le service est indisponible",
+    "notFound": "Route introuvable"
+  }
+}

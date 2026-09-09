@@ -1,0 +1,44 @@
+import { Router } from 'express';
+import authRoutes from '../modules/auth/auth.routes';
+import usersRoutes from '../modules/users/users.routes';
+import organizationsRoutes from '../modules/organizations/organizations.routes';
+import rolesRoutes from '../modules/roles/roles.routes';
+import departmentsRoutes from '../modules/departments/departments.routes';
+import teamsRoutes from '../modules/teams/teams.routes';
+import goalsRoutes from '../modules/goals/goals.routes';
+import kpisRoutes from '../modules/kpis/kpis.routes';
+import reviewCyclesRoutes from '../modules/reviewCycles/reviewCycles.routes';
+import reviewTemplatesRoutes from '../modules/reviewTemplates/reviewTemplates.routes';
+import reviewsRoutes from '../modules/reviews/reviews.routes';
+import feedbackRoutes from '../modules/feedback/feedback.routes';
+import developmentPlansRoutes from '../modules/developmentPlans/developmentPlans.routes';
+import competenciesRoutes from '../modules/competencies/competencies.routes';
+import recognitionsRoutes from '../modules/recognitions/recognitions.routes';
+import notificationsRoutes from '../modules/notifications/notifications.routes';
+import reportsRoutes from '../modules/reports/reports.routes';
+import adminRoutes from '../modules/admin/admin.routes';
+import systemRoutes from '../modules/system/system.routes';
+
+export const routes: Router = Router();
+
+routes.use('/auth', authRoutes);
+routes.use('/users', usersRoutes);
+routes.use('/organizations', organizationsRoutes);
+routes.use('/roles', rolesRoutes);
+routes.use('/departments', departmentsRoutes);
+routes.use('/teams', teamsRoutes);
+routes.use('/goals', goalsRoutes);
+routes.use('/kpis', kpisRoutes);
+routes.use('/review-cycles', reviewCyclesRoutes);
+routes.use('/review-templates', reviewTemplatesRoutes);
+routes.use('/reviews', reviewsRoutes);
+routes.use('/feedback', feedbackRoutes);
+routes.use('/development-plans', developmentPlansRoutes);
+routes.use('/competencies', competenciesRoutes);
+routes.use('/recognitions', recognitionsRoutes);
+routes.use('/notifications', notificationsRoutes);
+routes.use('/reports', reportsRoutes);
+routes.use('/admin', adminRoutes);
+routes.use('/system', systemRoutes);
+
+export default routes;

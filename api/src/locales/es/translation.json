@@ -1,0 +1,140 @@
+{
+  "common": {
+    "success": "Éxito",
+    "notFound": "Recurso no encontrado",
+    "badRequest": "Solicitud incorrecta",
+    "unauthorized": "Autenticación requerida",
+    "forbidden": "No tiene permiso para realizar esta acción",
+    "serverError": "Ocurrió un error inesperado. Inténtelo de nuevo más tarde.",
+    "invalidId": "Identificador no válido",
+    "required": "{{field}} es obligatorio"
+  },
+  "validation": {
+    "failed": "La validación falló",
+    "invalidBody": "El cuerpo de la solicitud no es válido"
+  },
+  "auth": {
+    "unauthorized": "Autenticación requerida",
+    "invalidToken": "Token de sesión inválido o expirado",
+    "invalidCredentials": "Correo o contraseña inválidos",
+    "accountInactive": "Esta cuenta está inactiva",
+    "passwordChanged": "Contraseña cambiada correctamente",
+    "resetRequested": "Si este correo existe, se ha enviado un enlace de restablecimiento",
+    "resetCompleted": "Contraseña restablecida. Ya puede iniciar sesión.",
+    "invalidResetToken": "El token de restablecimiento es inválido o ha expirado",
+    "emailVerified": "Correo verificado correctamente",
+    "userExists": "Ya existe una cuenta con este correo",
+    "tokenRequired": "Se requiere un token",
+    "logoutSuccess": "Sesión cerrada correctamente",
+    "oldPasswordIncorrect": "Su contraseña actual es incorrecta"
+  },
+  "user": {
+    "notFound": "Usuario no encontrado",
+    "emailExists": "Ya existe un usuario con este correo",
+    "created": "Usuario creado correctamente",
+    "updated": "Usuario actualizado",
+    "deleted": "Usuario eliminado",
+    "restored": "Usuario restaurado",
+    "roleChanged": "Roles actualizados"
+  },
+  "org": {
+    "notFound": "Organización no encontrada",
+    "created": "Organización creada",
+    "updated": "Organización actualizada",
+    "slugExists": "Ya existe una organización con este slug",
+    "settingsSaved": "Ajustes de la organización guardados"
+  },
+  "role": {
+    "notFound": "Rol no encontrado",
+    "keyExists": "Ya existe un rol con esta clave",
+    "systemRoleLocked": "Los roles del sistema no pueden modificarse"
+  },
+  "dept": {
+    "notFound": "Departamento no encontrado",
+    "nameExists": "Ya existe un departamento con este nombre",
+    "hasChildren": "El departamento tiene subdepartamentos y no puede eliminarse"
+  },
+  "team": {
+    "notFound": "Equipo no encontrado",
+    "memberAdded": "Miembro añadido al equipo",
+    "memberRemoved": "Miembro eliminado del equipo"
+  },
+  "goal": {
+    "notFound": "Objetivo no encontrado",
+    "noAccess": "No tiene acceso a este objetivo",
+    "created": "Objetivo creado",
+    "updated": "Objetivo actualizado",
+    "deleted": "Objetivo eliminado",
+    "checkinAdded": "Check-in registrado",
+    "keyResultNotFound": "Resultado clave no encontrado",
+    "cascadeNotAllowed": "El objetivo no puede alinearse bajo sí mismo"
+  },
+  "kpi": {
+    "notFound": "KPI no encontrado",
+    "entryAdded": "Entrada de KPI registrada",
+    "entryNotFound": "Entrada de KPI no encontrada"
+  },
+  "cycle": {
+    "notFound": "Ciclo de evaluación no encontrado",
+    "activeExists": "Ya existe un ciclo activo del mismo periodo",
+    "cannotClose": "El ciclo no puede cerrarse",
+    "statusChanged": "Estado del ciclo actualizado"
+  },
+  "template": {
+    "notFound": "Plantilla de evaluación no encontrada",
+    "hasQuestions": "La plantilla ya tiene preguntas",
+    "questionNotFound": "Pregunta no encontrada"
+  },
+  "review": {
+    "notFound": "Evaluación de desempeño no encontrada",
+    "notCreated": "No existe evaluación para este usuario en el ciclo",
+    "notEditable": "Esta evaluación no puede editarse en su estado actual",
+    "alreadySubmitted": "Su evaluación ya ha sido enviada",
+    "selfCompleted": "Autoevaluación enviada",
+    "submitted": "Evaluación enviada",
+    "finalized": "Evaluación finalizada",
+    "approved": "Evaluación aprobada",
+    "signedOff": "Evaluación firmada",
+    "alreadyParticipant": "El usuario ya es evaluador",
+    "notParticipant": "Usted no es participante de esta evaluación",
+    "statusChanged": "Estado de la evaluación actualizado"
+  },
+  "feedback": {
+    "notFound": "Comentario no encontrado",
+    "created": "Comentario compartido",
+    "cannotFeedbackSelf": "No puede enviarse comentarios a sí mismo"
+  },
+  "plan": {
+    "notFound": "Plan de desarrollo no encontrado",
+    "activityNotFound": "Actividad de desarrollo no encontrada",
+    "created": "Plan de desarrollo creado"
+  },
+  "competency": {
+    "notFound": "Competencia no encontrada",
+    "frameworkNotFound": "Marco de competencias no encontrado",
+    "assessmentSaved": "Evaluación de habilidades guardada"
+  },
+  "recognition": {
+    "notFound": "Reconocimiento no encontrado",
+    "created": "Reconocimiento enviado"
+  },
+  "notification": {
+    "notFound": "Notificación no encontrada",
+    "allRead": "Todas las notificaciones marcadas como leídas"
+  },
+  "report": {
+    "notFound": "No hay datos de informe",
+    "exported": "Informe exportado"
+  },
+  "admin": {
+    "settingsSaved": "Ajustes guardados",
+    "auditLogEmpty": "Sin entradas de auditoría",
+    "dataExported": "Exportación de datos completada",
+    "dataAnonymized": "Datos del usuario anonimizados"
+  },
+  "system": {
+    "ok": "El servicio está operativo",
+    "unavailable": "El servicio no está disponible",
+    "notFound": "Ruta no encontrada"
+  }
+}

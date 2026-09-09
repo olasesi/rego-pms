@@ -1,0 +1,140 @@
+{
+  "common": {
+    "success": "成功",
+    "notFound": "未找到资源",
+    "badRequest": "无效请求",
+    "unauthorized": "需要身份验证",
+    "forbidden": "您没有权限执行此操作",
+    "serverError": "发生意外错误，请稍后重试。",
+    "invalidId": "无效的标识符",
+    "required": "{{field}} 为必填项"
+  },
+  "validation": {
+    "failed": "验证失败",
+    "invalidBody": "请求体无效"
+  },
+  "auth": {
+    "unauthorized": "需要身份验证",
+    "invalidToken": "会话令牌无效或已过期",
+    "invalidCredentials": "邮箱或密码无效",
+    "accountInactive": "此账户已停用",
+    "passwordChanged": "密码修改成功",
+    "resetRequested": "如果此邮箱存在，已发送重置链接",
+    "resetCompleted": "密码重置成功，现在可以登录。",
+    "invalidResetToken": "重置令牌无效或已过期",
+    "emailVerified": "邮箱验证成功",
+    "userExists": "此邮箱的账户已存在",
+    "tokenRequired": "需要提供令牌",
+    "logoutSuccess": "退出登录成功",
+    "oldPasswordIncorrect": "当前密码不正确"
+  },
+  "user": {
+    "notFound": "未找到用户",
+    "emailExists": "此邮箱的用户已存在",
+    "created": "用户创建成功",
+    "updated": "用户已更新",
+    "deleted": "用户已删除",
+    "restored": "用户已恢复",
+    "roleChanged": "角色已更新"
+  },
+  "org": {
+    "notFound": "未找到组织",
+    "created": "组织已创建",
+    "updated": "组织已更新",
+    "slugExists": "此标识的组织已存在",
+    "settingsSaved": "组织设置已保存"
+  },
+  "role": {
+    "notFound": "未找到角色",
+    "keyExists": "此键值的角色已存在",
+    "systemRoleLocked": "系统角色不可修改"
+  },
+  "dept": {
+    "notFound": "未找到部门",
+    "nameExists": "此名称的部门已存在",
+    "hasChildren": "部门下存在子部门，无法删除"
+  },
+  "team": {
+    "notFound": "未找到团队",
+    "memberAdded": "成员已加入团队",
+    "memberRemoved": "成员已移出团队"
+  },
+  "goal": {
+    "notFound": "未找到目标",
+    "noAccess": "您无权访问此目标",
+    "created": "目标已创建",
+    "updated": "目标已更新",
+    "deleted": "目标已删除",
+    "checkinAdded": "签到已记录",
+    "keyResultNotFound": "未找到关键结果",
+    "cascadeNotAllowed": "目标不能对齐到自身之下"
+  },
+  "kpi": {
+    "notFound": "未找到 KPI",
+    "entryAdded": "KPI 记录已录入",
+    "entryNotFound": "未找到 KPI 记录"
+  },
+  "cycle": {
+    "notFound": "未找到考核周期",
+    "activeExists": "已存在相同周期的进行中考核",
+    "cannotClose": "考核周期无法关闭",
+    "statusChanged": "考核周期状态已更新"
+  },
+  "template": {
+    "notFound": "未找到考核模板",
+    "hasQuestions": "模板已有问题",
+    "questionNotFound": "未找到问题"
+  },
+  "review": {
+    "notFound": "未找到绩效评估",
+    "notCreated": "此用户在考核周期内尚无评估",
+    "notEditable": "当前状态的评估无法编辑",
+    "alreadySubmitted": "您的评估已提交",
+    "selfCompleted": "自评已提交",
+    "submitted": "评估已提交",
+    "finalized": "评估已定稿",
+    "approved": "评估已批准",
+    "signedOff": "评估已签字",
+    "alreadyParticipant": "该用户已是评估人",
+    "notParticipant": "您不是此评估的参与者",
+    "statusChanged": "评估状态已更新"
+  },
+  "feedback": {
+    "notFound": "未找到反馈",
+    "created": "反馈已分享",
+    "cannotFeedbackSelf": "不能给自己发送反馈"
+  },
+  "plan": {
+    "notFound": "未找到发展计划",
+    "activityNotFound": "未找到发展活动",
+    "created": "发展计划已创建"
+  },
+  "competency": {
+    "notFound": "未找到能力项",
+    "frameworkNotFound": "未找到能力框架",
+    "assessmentSaved": "技能评估已保存"
+  },
+  "recognition": {
+    "notFound": "未找到认可记录",
+    "created": "认可已发送"
+  },
+  "notification": {
+    "notFound": "未找到通知",
+    "allRead": "所有通知已标记为已读"
+  },
+  "report": {
+    "notFound": "暂无报表数据",
+    "exported": "报表已导出"
+  },
+  "admin": {
+    "settingsSaved": "设置已保存",
+    "auditLogEmpty": "审计记录为空",
+    "dataExported": "数据导出完成",
+    "dataAnonymized": "用户数据已匿名化"
+  },
+  "system": {
+    "ok": "服务正常",
+    "unavailable": "服务不可用",
+    "notFound": "路由未找到"
+  }
+}

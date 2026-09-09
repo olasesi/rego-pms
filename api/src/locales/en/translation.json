@@ -1,0 +1,140 @@
+{
+  "common": {
+    "success": "Success",
+    "notFound": "Resource not found",
+    "badRequest": "Bad request",
+    "unauthorized": "Authentication required",
+    "forbidden": "You do not have permission to perform this action",
+    "serverError": "An unexpected error occurred. Please try again later.",
+    "invalidId": "Invalid identifier provided",
+    "required": "{{field}} is required"
+  },
+  "validation": {
+    "failed": "Validation failed",
+    "invalidBody": "The request body is invalid"
+  },
+  "auth": {
+    "unauthorized": "Authentication required",
+    "invalidToken": "Invalid or expired session token",
+    "invalidCredentials": "Invalid email or password",
+    "accountInactive": "This account is inactive",
+    "passwordChanged": "Password changed successfully",
+    "resetRequested": "If this email exists, a reset link has been sent",
+    "resetCompleted": "Password reset successfully. You can now sign in.",
+    "invalidResetToken": "The reset token is invalid or has expired",
+    "emailVerified": "Email verified successfully",
+    "userExists": "An account with this email already exists",
+    "tokenRequired": "A token is required",
+    "logoutSuccess": "Signed out successfully",
+    "oldPasswordIncorrect": "Your current password is incorrect"
+  },
+  "user": {
+    "notFound": "User not found",
+    "emailExists": "A user with this email already exists",
+    "created": "User created successfully",
+    "updated": "User updated successfully",
+    "deleted": "User removed",
+    "restored": "User restored",
+    "roleChanged": "Roles updated successfully"
+  },
+  "org": {
+    "notFound": "Organization not found",
+    "created": "Organization created",
+    "updated": "Organization updated",
+    "slugExists": "An organization with this slug already exists",
+    "settingsSaved": "Organization settings saved"
+  },
+  "role": {
+    "notFound": "Role not found",
+    "keyExists": "A role with this key already exists",
+    "systemRoleLocked": "System roles cannot be modified"
+  },
+  "dept": {
+    "notFound": "Department not found",
+    "nameExists": "A department with this name already exists",
+    "hasChildren": "Department has child departments and cannot be deleted"
+  },
+  "team": {
+    "notFound": "Team not found",
+    "memberAdded": "Member added to team",
+    "memberRemoved": "Member removed from team"
+  },
+  "goal": {
+    "notFound": "Goal not found",
+    "noAccess": "You do not have access to this goal",
+    "created": "Goal created",
+    "updated": "Goal updated",
+    "deleted": "Goal deleted",
+    "checkinAdded": "Check-in recorded",
+    "keyResultNotFound": "Key result not found",
+    "cascadeNotAllowed": "Goal cannot be aligned under itself"
+  },
+  "kpi": {
+    "notFound": "KPI not found",
+    "entryAdded": "KPI entry recorded",
+    "entryNotFound": "KPI entry not found"
+  },
+  "cycle": {
+    "notFound": "Review cycle not found",
+    "activeExists": "An active review cycle of the same period already exists",
+    "cannotClose": "Cycle cannot be closed",
+    "statusChanged": "Cycle status updated"
+  },
+  "template": {
+    "notFound": "Review template not found",
+    "hasQuestions": "Template already has questions",
+    "questionNotFound": "Question not found"
+  },
+  "review": {
+    "notFound": "Performance review not found",
+    "notCreated": "No review exists yet for this user in the cycle",
+    "notEditable": "This review cannot be edited in its current state",
+    "alreadySubmitted": "Your assessment has already been submitted",
+    "selfCompleted": "Self-assessment submitted",
+    "submitted": "Assessment submitted",
+    "finalized": "Review finalized",
+    "approved": "Review approved",
+    "signedOff": "Review signed off",
+    "alreadyParticipant": "User is already a reviewer",
+    "notParticipant": "You are not a participant of this review",
+    "statusChanged": "Review status updated"
+  },
+  "feedback": {
+    "notFound": "Feedback not found",
+    "created": "Feedback shared",
+    "cannotFeedbackSelf": "You cannot send feedback to yourself"
+  },
+  "plan": {
+    "notFound": "Development plan not found",
+    "activityNotFound": "Development activity not found",
+    "created": "Development plan created"
+  },
+  "competency": {
+    "notFound": "Competency not found",
+    "frameworkNotFound": "Competency framework not found",
+    "assessmentSaved": "Skill assessment saved"
+  },
+  "recognition": {
+    "notFound": "Recognition not found",
+    "created": "Recognition sent"
+  },
+  "notification": {
+    "notFound": "Notification not found",
+    "allRead": "All notifications marked as read"
+  },
+  "report": {
+    "notFound": "No report data found",
+    "exported": "Report exported"
+  },
+  "admin": {
+    "settingsSaved": "Settings saved",
+    "auditLogEmpty": "No audit entries",
+    "dataExported": "Data export completed",
+    "dataAnonymized": "User data anonymized"
+  },
+  "system": {
+    "ok": "Service is healthy",
+    "unavailable": "Service is unavailable",
+    "notFound": "Route not found"
+  }
+}
