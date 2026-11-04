@@ -1,0 +1,71 @@
+{
+  "app": {
+    "name": "Performance-Management-System",
+    "shortName": "PMS",
+    "tagline": "Menschen, Ziele und Entwicklung an einem Ort"
+  },
+  "nav": {
+    "home": "Start",
+    "goals": "Ziele und OKR",
+    "reviews": "Beurteilungen",
+    "feedback": "Feedback",
+    "oneOnOnes": "Einzelgespräche",
+    "surveys": "Umfragen",
+    "people": "Mitarbeitende",
+    "insights": "Auswertungen",
+    "admin": "Verwaltung",
+    "comingSoon": "Bald"
+  },
+  "header": {
+    "searchPlaceholder": "Personen, Ziele, Beurteilungen suchen…",
+    "language": "Sprache",
+    "theme": "Design",
+    "notifications": "Benachrichtigungen",
+    "profile": "Profil",
+    "toggleMenu": "Navigation umschalten"
+  },
+  "theme": {
+    "light": "Hell",
+    "dark": "Dunkel",
+    "midnight": "Mitternacht",
+    "highContrast": "Hoher Kontrast",
+    "system": "Systemeinstellung"
+  },
+  "home": {
+    "badge": "Grundgerüst bereit",
+    "title": "Leistung, abgestimmt.",
+    "subtitle": "Ziele, Beurteilungen, Feedback und Personalarbeit in einem inklusiven Arbeitsbereich.",
+    "note": "App-Gerüst, Designs, Internationalisierung und API-Client sind installiert. Die Funktionsseiten folgen im nächsten Schritt.",
+    "env": "Umgebung",
+    "api": "API-Basis-URL",
+    "modulesTitle": "Ein Modul pro Fähigkeit",
+    "modulesSubtitle": "Jede Fähigkeit hat genau einen kanonischen Ort — keine doppelten Funktionen."
+  },
+  "modules": {
+    "goals": "Ziele und OKR",
+    "reviews": "Leistungsbeurteilungen",
+    "feedback": "Laufendes Feedback",
+    "oneOnOnes": "Einzelgespräche",
+    "surveys": "Mitarbeiterbefragungen",
+    "timeOff": "Abwesenheiten",
+    "compensation": "Vergütung",
+    "onboarding": "Onboarding",
+    "calibration": "Kalibrierung",
+    "documents": "Dokumente",
+    "analytics": "Auswertungen",
+    "integrations": "Integrationen"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "back": "Zurück zur Startseite"
+  },
+  "common": {
+    "loading": "Wird geladen…",
+    "retry": "Erneut versuchen",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "search": "Suchen",
+    "error": "Etwas ist schiefgelaufen"
+  }
+}

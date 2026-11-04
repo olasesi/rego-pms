@@ -37,6 +37,14 @@ export const swaggerSpec = {
     { name: 'Reports', description: 'Dashboards & exports' },
     { name: 'Admin', description: 'Settings, audit logs, taxonomy' },
     { name: 'System', description: 'Health & metrics' },
+    { name: 'One-on-Ones', description: 'Recurring manager↔employee meetings, agendas and action items' },
+    { name: 'Surveys', description: 'Engagement, pulse and eNPS surveys with analytics' },
+    { name: 'Time Off', description: 'Leave policies, balances, requests, approvals and holidays' },
+    { name: 'Compensation', description: 'Salary bands, compensation records and pay review cycles' },
+    { name: 'Onboarding', description: 'Onboarding / offboarding templates and assignments' },
+    { name: 'Calibration', description: 'Calibration sessions, 9-box placement and final ratings' },
+    { name: 'Documents', description: 'Policy documents, contracts and e-acknowledgements' },
+    { name: 'Integrations', description: 'API keys, webhooks and delivery history' },
   ],
   components: {
     securitySchemes: {

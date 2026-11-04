@@ -1,18 +1,24 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import ElementPlus from 'element-plus';
-import en from 'element-plus/es/locale/lang/en';
 import 'element-plus/dist/index.css';
+import 'element-plus/theme-chalk/dark/css-vars.css';
 import App from '@/App.vue';
 import router from '@/router';
 import i18n from '@/i18n';
+import { useSettingsStore } from '@/stores/settings';
+import '@/styles/themes.scss';
 import '@/assets/main.css';
 
 const app = createApp(App);
+const pinia = createPinia();
 
-app.use(createPinia());
+app.use(pinia);
 app.use(router);
 app.use(i18n);
-app.use(ElementPlus, { locale: en });
+app.use(ElementPlus);
+
+// Apply persisted theme, locale and direction before the first paint.
+useSettingsStore(pinia).init();
 
 app.mount('#app');

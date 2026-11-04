@@ -1,29 +1,49 @@
 version: '3.9'
 
+# Full single-host stack: database, cache/queue, API, web client and monitoring.
+# For production use the Kubernetes manifests in ../deploy/k8s instead.
+#
+#   docker compose up -d --build
+#   web        http://localhost:8080
+#   api docs   http://localhost:8000/docs
+#   graphql    http://localhost:8000/graphql
+#   grafana    http://localhost:3001  (admin / $GRAFANA_PASSWORD)
+#   prometheus http://localhost:9090
+
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: '10m'
+    max-file: '3'
+
 services:
   mysql:
     image: mysql:8.0
     container_name: pms-mysql
     restart: unless-stopped
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     environment:
-      MYSQL_DATABASE: pms
-      MYSQL_USER: pms
-      MYSQL_PASSWORD: pms-secret
-      MYSQL_ROOT_PASSWORD: root-secret
+      MYSQL_DATABASE: ${DB_NAME:-pms}
+      MYSQL_USER: ${DB_USER:-pms}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-pms-secret}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root-secret}
     ports:
       - '3306:3306'
     volumes:
       - mysql_data:/var/lib/mysql
     healthcheck:
-      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost', '-uroot', '-proot-secret']
+      test: ['CMD-SHELL', 'mysqladmin ping -h 127.0.0.1 -uroot -p"$$MYSQL_ROOT_PASSWORD" --silent']
       interval: 10s
       timeout: 5s
       retries: 10
+      start_period: 30s
+    logging: *default-logging
 
   redis:
     image: redis:7-alpine
     container_name: pms-redis
     restart: unless-stopped
+    command: ['redis-server', '--appendonly', 'yes', '--maxmemory-policy', 'noeviction']
     ports:
       - '6379:6379'
     volumes:
@@ -33,9 +53,13 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    logging: *default-logging
 
   api:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pms/api:${IMAGE_TAG:-local}
     container_name: pms-api
     restart: unless-stopped
     depends_on:
@@ -45,20 +69,103 @@ services:
         condition: service_healthy
     environment:
       NODE_ENV: production
+      HOST: 0.0.0.0
       PORT: 8000
+      APP_URL: ${APP_URL:-http://localhost:8000}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:8080}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080}
       DB_HOST: mysql
       DB_PORT: 3306
-      DB_NAME: pms
-      DB_USER: pms
-      DB_PASSWORD: pms-secret
+      DB_NAME: ${DB_NAME:-pms}
+      DB_USER: ${DB_USER:-pms}
+      DB_PASSWORD: ${DB_PASSWORD:-pms-secret}
       REDIS_URL: redis://redis:6379
-      JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET:-docker-access-secret-change-me}
-      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:-docker-refresh-secret-change-me}
+      JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET:-docker-access-secret-change-me-please}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:-docker-refresh-secret-change-me-please}
       SEED_ADMIN_EMAIL: ${SEED_ADMIN_EMAIL:-admin@pms.local}
       SEED_ADMIN_PASSWORD: ${SEED_ADMIN_PASSWORD:-ChangeMe123!}
+      DEFAULT_LOCALE: ${DEFAULT_LOCALE:-en}
+      SUPPORTED_LOCALES: ${SUPPORTED_LOCALES:-en,fr,es,de,hi,zh}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      ENABLE_METRICS: 'true'
+      QUEUE_CONCURRENCY: ${QUEUE_CONCURRENCY:-5}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      SMTP_FROM: ${SMTP_FROM:-PMS <no-reply@pms.local>}
     ports:
       - '8000:8000'
+    volumes:
+      - api_logs:/app/logs
+    healthcheck:
+      test: ['CMD', 'wget', '-qO-', 'http://127.0.0.1:8000/health']
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
+    logging: *default-logging
+
+  web:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: /api/v1
+    image: pms/web:${IMAGE_TAG:-local}
+    container_name: pms-web
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - '8080:8080'
+    healthcheck:
+      test: ['CMD', 'wget', '-qO-', 'http://127.0.0.1:8080/healthz']
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    logging: *default-logging
+
+  prometheus:
+    image: prom/prometheus:v2.54.1
+    container_name: pms-prometheus
+    restart: unless-stopped
+    depends_on:
+      - api
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=15d'
+    volumes:
+      - ../deploy/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - '9090:9090'
+    logging: *default-logging
+
+  grafana:
+    image: grafana/grafana:11.2.0
+    container_name: pms-grafana
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+      GF_USERS_ALLOW_SIGN_UP: 'false'
+      GF_SERVER_ROOT_URL: ${GRAFANA_ROOT_URL:-http://localhost:3001}
+    volumes:
+      - ../deploy/monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ../deploy/monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafana_data:/var/lib/grafana
+    ports:
+      - '3001:3000'
+    logging: *default-logging
 
 volumes:
   mysql_data:
   redis_data:
+  prometheus_data:
+  grafana_data:
+  api_logs:

@@ -1,0 +1,22 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: pms
+
+resources:
+  - namespace.yaml
+  - configmap.yaml
+  - mysql.yaml
+  - redis.yaml
+  - api.yaml
+  - web.yaml
+  - ingress.yaml
+
+# Create the runtime secret before applying:
+#   kubectl apply -f secrets.example.yaml   # after replacing REPLACE_ME
+#
+# Image tags are promoted by CI via:
+#   kustomize edit set image ghcr.io/olasesi/rego-pms/api:<sha>
+labels:
+  - pairs:
+      app.kubernetes.io/part-of: pms
+    includeSelectors: false

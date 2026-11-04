@@ -1,0 +1,71 @@
+{
+  "app": {
+    "name": "Performance Management System",
+    "shortName": "PMS",
+    "tagline": "People, goals and growth in one place"
+  },
+  "nav": {
+    "home": "Home",
+    "goals": "Goals & OKRs",
+    "reviews": "Reviews",
+    "feedback": "Feedback",
+    "oneOnOnes": "One-on-ones",
+    "surveys": "Surveys",
+    "people": "People",
+    "insights": "Insights",
+    "admin": "Administration",
+    "comingSoon": "Soon"
+  },
+  "header": {
+    "searchPlaceholder": "Search people, goals, reviews…",
+    "language": "Language",
+    "theme": "Theme",
+    "notifications": "Notifications",
+    "profile": "Profile",
+    "toggleMenu": "Toggle navigation"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "midnight": "Midnight",
+    "highContrast": "High contrast",
+    "system": "Match system"
+  },
+  "home": {
+    "badge": "Scaffold ready",
+    "title": "Performance, aligned.",
+    "subtitle": "Goals, reviews, feedback and people operations in one inclusive workspace.",
+    "note": "The application shell, theming, internationalisation and API client are installed. Feature pages ship in the next pass.",
+    "env": "Environment",
+    "api": "API base URL",
+    "modulesTitle": "One module per capability",
+    "modulesSubtitle": "Every capability has a single canonical home — no duplicated features."
+  },
+  "modules": {
+    "goals": "Goals & OKRs",
+    "reviews": "Performance reviews",
+    "feedback": "Continuous feedback",
+    "oneOnOnes": "One-on-ones",
+    "surveys": "Engagement surveys",
+    "timeOff": "Time off",
+    "compensation": "Compensation",
+    "onboarding": "Onboarding",
+    "calibration": "Calibration",
+    "documents": "Documents",
+    "analytics": "Analytics",
+    "integrations": "Integrations"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has moved.",
+    "back": "Back to home"
+  },
+  "common": {
+    "loading": "Loading…",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "save": "Save",
+    "search": "Search",
+    "error": "Something went wrong"
+  }
+}

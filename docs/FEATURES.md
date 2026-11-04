@@ -99,6 +99,69 @@ repository. It drives the API design (`/api`) and will drive the Vue frontend (r
 - Data retention / GDPR: export & anonymisation endpoints
 - Observability: logging, monitoring, documentation (OpenAPI/Swagger)
 
+## 14. One-on-Ones
+
+- Recurring manager ↔ employee meeting series (cadence, start date, participants)
+- Per-meeting agendas co-owned by both participants
+- Action items with owner, due date and completion state
+- Meeting notes and private/shared visibility
+- Upcoming-meeting reminders and history
+
+## 15. Engagement Surveys
+
+- Survey lifecycle: draft → scheduled → active → closed
+- Question types: rating, single choice, multi choice, text, eNPS
+- Anonymous responses with minimum-response thresholds for analytics
+- Participation tracking, response rates, per-question distribution and eNPS
+- Scheduled launch/close windows and one-response-per-participant enforcement
+
+## 16. Time Off & Leave
+
+- Leave types with accrual, carry-over and approval policy per tenant
+- Per-employee balances (accrued / used / available) by leave year
+- Leave requests with working-day calculation, holiday calendars and approval workflow
+- Manager/HR approval, rejection reasons and cancellation
+- Public holidays per location and team absence calendar
+
+## 17. Compensation
+
+- Salary bands per job level, location and currency (min / midpoint / max)
+- Compensation records: base pay, variable pay, currency, effective date, reason
+- Pay review cycles with budget, eligibility and approval workflow
+- Per-employee review decisions (proposed → approved / rejected), immutable once locked
+- Compensation history and band-position analytics
+
+## 18. Onboarding & Offboarding
+
+- Reusable onboarding/offboarding templates with ordered tasks
+- Task assignment to employee, manager, buddy or HR; relative due dates
+- Assignment lifecycle with progress tracking and completion percentage
+- Automatic task generation when an assignment starts
+
+## 19. Calibration & 9-Box
+
+- Calibration sessions scoped to a review cycle or period
+- Participant pool with performance and potential ratings
+- 9-box placement (`low_impact` … `star`) derived from performance × potential bands
+- Final ratings captured during calibration and locked on completion
+- Session completion rules and immutable final ratings
+
+## 20. Documents & Acknowledgements
+
+- Document templates (policies, contracts, handbooks) with versioning
+- Send to selected recipients (user, department, team, organization)
+- Expiry windows and e-acknowledgement timestamps
+- Acknowledged / pending / expired status per recipient
+- Audit-friendly delivery and acknowledgement trail
+
+## 21. Integrations & Webhooks
+
+- Tenant-scoped API keys with hashed secrets, scopes and revocation
+- Webhook subscriptions with event filters and HMAC signing secret
+- Delivery history with status codes, retries and payload snapshots
+- Event dispatch for surveys, time off, documents and review lifecycle
+- Background delivery through the BullMQ queue when Redis is configured
+
 ---
 
 ## API Module Map (implemented in `api/`)
@@ -107,11 +170,15 @@ repository. It drives the API design (`/api`) and will drive the Vue frontend (r
 auth  organizations  users  roles  departments  teams
 goals  kpis  review-cycles  review-templates  reviews  feedback
 development-plans  competencies  recognitions  notifications
-reports  admin  system(health,metrics)  notifications
+one-on-ones  surveys  time-off  compensation  onboarding
+calibration  documents  integrations
+reports  admin  system(health,metrics)
 ```
 
 ### Cross-cutting concerns
 - Unified response envelope `{ success, data, meta, message }`
 - Zod request validation, central error handler, translation keys
-- Pagination, filtering, sorting helpers
-- Swagger/OpenAPI docs at `/docs`
+- Pagination, filtering, sorting helpers (`X-Total-Count` on list endpoints)
+- Swagger/OpenAPI docs at `/docs`, GraphQL read API at `/graphql`
+- Background jobs (BullMQ/Redis with inline fallback) for email, notifications and webhooks
+- Prometheus metrics at `/metrics`, health at `/health`, structured logs

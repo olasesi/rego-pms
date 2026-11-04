@@ -7,7 +7,8 @@
     "forbidden": "Sie haben keine Berechtigung für diese Aktion",
     "serverError": "Ein unerwarteter Fehler ist aufgetreten. Bitte später erneut versuchen.",
     "invalidId": "Ungültige Kennung",
-    "required": "{{field}} ist erforderlich"
+    "required": "{{field}} ist erforderlich",
+    "invalidRequest": "Die Anfrage konnte für diese Organisation nicht verarbeitet werden"
   },
   "validation": {
     "failed": "Validierung fehlgeschlagen",
@@ -136,5 +137,70 @@
     "ok": "Der Dienst ist betriebsbereit",
     "unavailable": "Der Dienst ist nicht verfügbar",
     "notFound": "Route nicht gefunden"
+  },
+  "oneOnOne": {
+    "notFound": "Einzelgesprächsreihe nicht gefunden",
+    "meetingNotFound": "Einzelgespräch nicht gefunden",
+    "agendaItemNotFound": "Agendapunkt nicht gefunden"
+  },
+  "survey": {
+    "notFound": "Umfrage nicht gefunden",
+    "questionNotFound": "Umfragefrage nicht gefunden",
+    "noQuestions": "Füge mindestens eine Frage hinzu, bevor die Umfrage gestartet wird",
+    "notActive": "Diese Umfrage nimmt derzeit keine Antworten an",
+    "alreadySubmitted": "Du hast diese Umfrage bereits beantwortet",
+    "requiredAnswer": "Eine Pflichtfrage wurde nicht beantwortet"
+  },
+  "timeOff": {
+    "leaveTypeNotFound": "Urlaubsart nicht gefunden",
+    "holidayNotFound": "Feiertag nicht gefunden",
+    "invalidDates": "Die angegebenen Daten sind ungültig",
+    "invalidRange": "Das Enddatum muss am oder nach dem Startdatum liegen",
+    "noWorkingDays": "Der ausgewählte Zeitraum enthält keine Arbeitstage",
+    "insufficientBalance": "Unzureichendes Urlaubsguthaben für diese Anfrage",
+    "requestNotFound": "Urlaubsantrag nicht gefunden",
+    "notPending": "Dieser Urlaubsantrag ist nicht mehr offen"
+  },
+  "compensation": {
+    "bandNotFound": "Gehaltsband nicht gefunden",
+    "invalidBand": "Minimum, Median und Maximum des Bands sind inkonsistent",
+    "recordNotFound": "Vergütungseintrag nicht gefunden",
+    "payReviewNotFound": "Gehaltsüberprüfungszyklus nicht gefunden",
+    "cycleClosed": "Dieser Gehaltsüberprüfungszyklus ist abgeschlossen",
+    "decisionExists": "Für diesen Mitarbeiter existiert bereits eine Entscheidung",
+    "decisionNotFound": "Gehaltsentscheidung nicht gefunden",
+    "decisionLocked": "Diese Entscheidung ist gesperrt und kann nicht geändert werden",
+    "pendingDecisions": "Alle Entscheidungen müssen vor dem Abschluss des Zyklus bearbeitet werden"
+  },
+  "onboarding": {
+    "templateNotFound": "Onboarding-Vorlage nicht gefunden",
+    "taskNotFound": "Onboarding-Aufgabe nicht gefunden",
+    "templateArchived": "Diese Onboarding-Vorlage ist archiviert",
+    "assignmentNotFound": "Onboarding-Zuweisung nicht gefunden",
+    "progressNotFound": "Onboarding-Aufgabe nicht gefunden"
+  },
+  "calibration": {
+    "sessionNotFound": "Kalibrierungssitzung nicht gefunden",
+    "alreadyCompleted": "Diese Kalibrierungssitzung ist bereits abgeschlossen",
+    "sessionLocked": "Teilnehmer können nach Abschluss der Sitzung nicht mehr geändert werden",
+    "participantExists": "Dieser Mitarbeiter ist bereits Teilnehmer",
+    "participantNotFound": "Kalibrierungsteilnehmer nicht gefunden",
+    "finalRatingLocked": "Endbewertungen sind nach Abschluss der Sitzung unveränderlich",
+    "missingFinalRatings": "Jeder Teilnehmer benötigt vor dem Abschluss eine Endbewertung"
+  },
+  "documents": {
+    "templateNotFound": "Dokumentvorlage nicht gefunden",
+    "templateArchived": "Diese Dokumentvorlage ist archiviert",
+    "noRecipients": "Wähle mindestens einen Empfänger aus",
+    "recipientNotFound": "Keine passenden Empfänger gefunden",
+    "documentNotFound": "Dokument nicht gefunden",
+    "alreadyAcknowledged": "Dieses Dokument wurde bereits bestätigt",
+    "expired": "Dieses Dokument ist abgelaufen und kann nicht mehr bestätigt werden"
+  },
+  "integrations": {
+    "apiKeyNotFound": "API-Schlüssel nicht gefunden",
+    "webhookNotFound": "Webhook nicht gefunden",
+    "invalidWebhookUrl": "Die Webhook-URL muss eine gültige HTTP(S)-URL sein",
+    "noEvents": "Abonniere den Webhook für mindestens ein Ereignis"
   }
 }

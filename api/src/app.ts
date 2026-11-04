@@ -17,6 +17,8 @@ import { notFound } from './common/middleware/notFound';
 import { routes } from './routes';
 import { swaggerSpec } from './swagger';
 import { sequelize } from './config/database';
+import { authenticate } from './common/middleware/authenticate';
+import { graphqlHandler } from './graphql';
 
 const morganStream = {
   write: (message: string): void => {
@@ -49,6 +51,10 @@ export function createApp(): Express {
   app.use(i18nMiddleware);
   app.use(compression());
   app.use(hpp());
+
+  // GraphQL reads the raw request stream itself, so it must be mounted before
+  // the JSON body parser.
+  app.use('/graphql', authenticate, graphqlHandler);
 
   app.use(express.json({ limit: '1mb' }));
   app.use(express.urlencoded({ extended: true, limit: '1mb' }));

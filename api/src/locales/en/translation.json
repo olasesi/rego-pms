@@ -7,7 +7,8 @@
     "forbidden": "You do not have permission to perform this action",
     "serverError": "An unexpected error occurred. Please try again later.",
     "invalidId": "Invalid identifier provided",
-    "required": "{{field}} is required"
+    "required": "{{field}} is required",
+    "invalidRequest": "The request could not be processed for this organization"
   },
   "validation": {
     "failed": "Validation failed",
@@ -136,5 +137,70 @@
     "ok": "Service is healthy",
     "unavailable": "Service is unavailable",
     "notFound": "Route not found"
+  },
+  "oneOnOne": {
+    "notFound": "One-on-one series not found",
+    "meetingNotFound": "One-on-one meeting not found",
+    "agendaItemNotFound": "Agenda item not found"
+  },
+  "survey": {
+    "notFound": "Survey not found",
+    "questionNotFound": "Survey question not found",
+    "noQuestions": "Add at least one question before launching the survey",
+    "notActive": "This survey is not currently accepting responses",
+    "alreadySubmitted": "You have already responded to this survey",
+    "requiredAnswer": "A required question has not been answered"
+  },
+  "timeOff": {
+    "leaveTypeNotFound": "Leave type not found",
+    "holidayNotFound": "Holiday not found",
+    "invalidDates": "The supplied dates are invalid",
+    "invalidRange": "The end date must be on or after the start date",
+    "noWorkingDays": "The selected range contains no working days",
+    "insufficientBalance": "Insufficient leave balance for this request",
+    "requestNotFound": "Leave request not found",
+    "notPending": "This leave request is no longer pending"
+  },
+  "compensation": {
+    "bandNotFound": "Compensation band not found",
+    "invalidBand": "Band minimum, midpoint and maximum are inconsistent",
+    "recordNotFound": "Compensation record not found",
+    "payReviewNotFound": "Pay review cycle not found",
+    "cycleClosed": "This pay review cycle is closed",
+    "decisionExists": "A decision already exists for this employee",
+    "decisionNotFound": "Pay review decision not found",
+    "decisionLocked": "This decision is locked and cannot be changed",
+    "pendingDecisions": "All decisions must be approved or rejected before closing the cycle"
+  },
+  "onboarding": {
+    "templateNotFound": "Onboarding template not found",
+    "taskNotFound": "Onboarding template task not found",
+    "templateArchived": "This onboarding template is archived",
+    "assignmentNotFound": "Onboarding assignment not found",
+    "progressNotFound": "Onboarding task not found"
+  },
+  "calibration": {
+    "sessionNotFound": "Calibration session not found",
+    "alreadyCompleted": "This calibration session is already completed",
+    "sessionLocked": "Participants cannot be changed after the session is completed",
+    "participantExists": "This employee is already a participant",
+    "participantNotFound": "Calibration participant not found",
+    "finalRatingLocked": "Final ratings are immutable after the session is completed",
+    "missingFinalRatings": "Every participant needs a final rating before completing the session"
+  },
+  "documents": {
+    "templateNotFound": "Document template not found",
+    "templateArchived": "This document template is archived",
+    "noRecipients": "Select at least one recipient",
+    "recipientNotFound": "No matching recipients were found",
+    "documentNotFound": "Document not found",
+    "alreadyAcknowledged": "This document has already been acknowledged",
+    "expired": "This document has expired and can no longer be acknowledged"
+  },
+  "integrations": {
+    "apiKeyNotFound": "API key not found",
+    "webhookNotFound": "Webhook not found",
+    "invalidWebhookUrl": "The webhook URL must be a valid HTTP(S) URL",
+    "noEvents": "Subscribe the webhook to at least one event"
   }
 }

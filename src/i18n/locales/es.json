@@ -1,0 +1,71 @@
+{
+  "app": {
+    "name": "Sistema de gestión del desempeño",
+    "shortName": "SGD",
+    "tagline": "Personas, objetivos y crecimiento en un solo lugar"
+  },
+  "nav": {
+    "home": "Inicio",
+    "goals": "Objetivos y OKR",
+    "reviews": "Evaluaciones",
+    "feedback": "Comentarios",
+    "oneOnOnes": "Reuniones individuales",
+    "surveys": "Encuestas",
+    "people": "Personas",
+    "insights": "Análisis",
+    "admin": "Administración",
+    "comingSoon": "Pronto"
+  },
+  "header": {
+    "searchPlaceholder": "Buscar personas, objetivos, evaluaciones…",
+    "language": "Idioma",
+    "theme": "Tema",
+    "notifications": "Notificaciones",
+    "profile": "Perfil",
+    "toggleMenu": "Mostrar navegación"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "midnight": "Medianoche",
+    "highContrast": "Alto contraste",
+    "system": "Según el sistema"
+  },
+  "home": {
+    "badge": "Base lista",
+    "title": "El desempeño, alineado.",
+    "subtitle": "Objetivos, evaluaciones, comentarios y gestión de personas en un espacio inclusivo.",
+    "note": "La estructura de la aplicación, los temas, la internacionalización y el cliente de API están instalados. Las páginas funcionales llegan en la próxima etapa.",
+    "env": "Entorno",
+    "api": "URL base de la API",
+    "modulesTitle": "Un módulo por capacidad",
+    "modulesSubtitle": "Cada capacidad tiene un único lugar canónico: sin funciones duplicadas."
+  },
+  "modules": {
+    "goals": "Objetivos y OKR",
+    "reviews": "Evaluaciones de desempeño",
+    "feedback": "Comentarios continuos",
+    "oneOnOnes": "Reuniones individuales",
+    "surveys": "Encuestas de compromiso",
+    "timeOff": "Permisos",
+    "compensation": "Compensación",
+    "onboarding": "Incorporación",
+    "calibration": "Calibración",
+    "documents": "Documentos",
+    "analytics": "Análisis",
+    "integrations": "Integraciones"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o se ha movido.",
+    "back": "Volver al inicio"
+  },
+  "common": {
+    "loading": "Cargando…",
+    "retry": "Reintentar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "search": "Buscar",
+    "error": "Algo salió mal"
+  }
+}

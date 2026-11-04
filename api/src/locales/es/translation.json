@@ -7,7 +7,8 @@
     "forbidden": "No tiene permiso para realizar esta acción",
     "serverError": "Ocurrió un error inesperado. Inténtelo de nuevo más tarde.",
     "invalidId": "Identificador no válido",
-    "required": "{{field}} es obligatorio"
+    "required": "{{field}} es obligatorio",
+    "invalidRequest": "La solicitud no se pudo procesar para esta organización"
   },
   "validation": {
     "failed": "La validación falló",
@@ -136,5 +137,70 @@
     "ok": "El servicio está operativo",
     "unavailable": "El servicio no está disponible",
     "notFound": "Ruta no encontrada"
+  },
+  "oneOnOne": {
+    "notFound": "Serie de reuniones individuales no encontrada",
+    "meetingNotFound": "Reunión individual no encontrada",
+    "agendaItemNotFound": "Punto del orden del día no encontrado"
+  },
+  "survey": {
+    "notFound": "Encuesta no encontrada",
+    "questionNotFound": "Pregunta de la encuesta no encontrada",
+    "noQuestions": "Añade al menos una pregunta antes de lanzar la encuesta",
+    "notActive": "Esta encuesta no acepta respuestas actualmente",
+    "alreadySubmitted": "Ya has respondido a esta encuesta",
+    "requiredAnswer": "No se ha respondido a una pregunta obligatoria"
+  },
+  "timeOff": {
+    "leaveTypeNotFound": "Tipo de permiso no encontrado",
+    "holidayNotFound": "Día festivo no encontrado",
+    "invalidDates": "Las fechas proporcionadas no son válidas",
+    "invalidRange": "La fecha de fin debe ser igual o posterior a la fecha de inicio",
+    "noWorkingDays": "El rango seleccionado no contiene días laborables",
+    "insufficientBalance": "Saldo de permisos insuficiente para esta solicitud",
+    "requestNotFound": "Solicitud de permiso no encontrada",
+    "notPending": "Esta solicitud de permiso ya no está pendiente"
+  },
+  "compensation": {
+    "bandNotFound": "Banda salarial no encontrada",
+    "invalidBand": "El mínimo, la mediana y el máximo de la banda son incoherentes",
+    "recordNotFound": "Registro de compensación no encontrado",
+    "payReviewNotFound": "Ciclo de revisión salarial no encontrado",
+    "cycleClosed": "Este ciclo de revisión salarial está cerrado",
+    "decisionExists": "Ya existe una decisión para este empleado",
+    "decisionNotFound": "Decisión de revisión salarial no encontrada",
+    "decisionLocked": "Esta decisión está bloqueada y no se puede modificar",
+    "pendingDecisions": "Todas las decisiones deben resolverse antes de cerrar el ciclo"
+  },
+  "onboarding": {
+    "templateNotFound": "Plantilla de incorporación no encontrada",
+    "taskNotFound": "Tarea de la plantilla de incorporación no encontrada",
+    "templateArchived": "Esta plantilla de incorporación está archivada",
+    "assignmentNotFound": "Asignación de incorporación no encontrada",
+    "progressNotFound": "Tarea de incorporación no encontrada"
+  },
+  "calibration": {
+    "sessionNotFound": "Sesión de calibración no encontrada",
+    "alreadyCompleted": "Esta sesión de calibración ya está completada",
+    "sessionLocked": "Los participantes no se pueden cambiar tras completar la sesión",
+    "participantExists": "Este empleado ya es participante",
+    "participantNotFound": "Participante de calibración no encontrado",
+    "finalRatingLocked": "Las valoraciones finales son inmutables tras completar la sesión",
+    "missingFinalRatings": "Cada participante necesita una valoración final antes de completar la sesión"
+  },
+  "documents": {
+    "templateNotFound": "Plantilla de documento no encontrada",
+    "templateArchived": "Esta plantilla de documento está archivada",
+    "noRecipients": "Selecciona al menos un destinatario",
+    "recipientNotFound": "No se encontraron destinatarios coincidentes",
+    "documentNotFound": "Documento no encontrado",
+    "alreadyAcknowledged": "Este documento ya ha sido acusado de recibo",
+    "expired": "Este documento ha caducado y ya no se puede acusar recibo"
+  },
+  "integrations": {
+    "apiKeyNotFound": "Clave de API no encontrada",
+    "webhookNotFound": "Webhook no encontrado",
+    "invalidWebhookUrl": "La URL del webhook debe ser una URL HTTP(S) válida",
+    "noEvents": "Suscribe el webhook a al menos un evento"
   }
 }

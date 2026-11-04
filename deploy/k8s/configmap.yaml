@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pms-api-config
+  namespace: pms
+  labels:
+    app.kubernetes.io/name: pms-api
+data:
+  NODE_ENV: production
+  HOST: 0.0.0.0
+  PORT: '8000'
+  API_PREFIX: /api/v1
+  APP_URL: https://pms.example.com
+  FRONTEND_URL: https://pms.example.com
+  CORS_ORIGINS: https://pms.example.com
+  DB_HOST: pms-mysql
+  DB_PORT: '3306'
+  DB_NAME: pms
+  DB_LOGGING: 'false'
+  REDIS_URL: redis://pms-redis:6379
+  DEFAULT_LOCALE: en
+  SUPPORTED_LOCALES: en,fr,es,de,hi,zh
+  LOG_LEVEL: info
+  ENABLE_METRICS: 'true'
+  QUEUE_CONCURRENCY: '5'
+  SMTP_PORT: '587'
+  SMTP_SECURE: 'false'
+  SMTP_FROM: PMS <no-reply@pms.local>

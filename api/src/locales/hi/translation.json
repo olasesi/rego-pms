@@ -7,7 +7,8 @@
     "forbidden": "आपके पास यह क्रिया करने की अनुमति नहीं है",
     "serverError": "एक अप्रत्याशित त्रुटि हुई। कृपया बाद में पुनः प्रयास करें।",
     "invalidId": "अमान्य पहचानकर्ता",
-    "required": "{{field}} आवश्यक है"
+    "required": "{{field}} आवश्यक है",
+    "invalidRequest": "इस संगठन के लिए अनुरोध संसाधित नहीं किया जा सका"
   },
   "validation": {
     "failed": "सत्यापन विफल रहा",
@@ -136,5 +137,70 @@
     "ok": "सेवा स्वस्थ है",
     "unavailable": "सेवा अनुपलब्ध है",
     "notFound": "मार्ग नहीं मिला"
+  },
+  "oneOnOne": {
+    "notFound": "वन-ऑन-वन श्रृंखला नहीं मिली",
+    "meetingNotFound": "वन-ऑन-वन बैठक नहीं मिली",
+    "agendaItemNotFound": "एजेंडा आइटम नहीं मिला"
+  },
+  "survey": {
+    "notFound": "सर्वेक्षण नहीं मिला",
+    "questionNotFound": "सर्वेक्षण प्रश्न नहीं मिला",
+    "noQuestions": "सर्वेक्षण शुरू करने से पहले कम से कम एक प्रश्न जोड़ें",
+    "notActive": "यह सर्वेक्षण अभी उत्तर स्वीकार नहीं कर रहा है",
+    "alreadySubmitted": "आप पहले ही इस सर्वेक्षण का उत्तर दे चुके हैं",
+    "requiredAnswer": "एक अनिवार्य प्रश्न का उत्तर नहीं दिया गया है"
+  },
+  "timeOff": {
+    "leaveTypeNotFound": "अवकाश प्रकार नहीं मिला",
+    "holidayNotFound": "अवकाश दिवस नहीं मिला",
+    "invalidDates": "दी गई तिथियाँ अमान्य हैं",
+    "invalidRange": "समाप्ति तिथि प्रारंभ तिथि के बराबर या बाद की होनी चाहिए",
+    "noWorkingDays": "चयनित अवधि में कोई कार्य दिवस नहीं है",
+    "insufficientBalance": "इस अनुरोध के लिए अपर्याप्त अवकाश शेष है",
+    "requestNotFound": "अवकाश अनुरोध नहीं मिला",
+    "notPending": "यह अवकाश अनुरोध अब लंबित नहीं है"
+  },
+  "compensation": {
+    "bandNotFound": "वेतन बैंड नहीं मिला",
+    "invalidBand": "बैंड का न्यूनतम, मध्य और अधिकतम असंगत है",
+    "recordNotFound": "मुआवजा रिकॉर्ड नहीं मिला",
+    "payReviewNotFound": "वेतन समीक्षा चक्र नहीं मिला",
+    "cycleClosed": "यह वेतन समीक्षा चक्र बंद है",
+    "decisionExists": "इस कर्मचारी के लिए निर्णय पहले से मौजूद है",
+    "decisionNotFound": "वेतन समीक्षा निर्णय नहीं मिला",
+    "decisionLocked": "यह निर्णय लॉक है और बदला नहीं जा सकता",
+    "pendingDecisions": "चक्र बंद करने से पहले सभी निर्णयों का निपटारा होना चाहिए"
+  },
+  "onboarding": {
+    "templateNotFound": "ऑनबोर्डिंग टेम्पलेट नहीं मिला",
+    "taskNotFound": "ऑनबोर्डिंग कार्य नहीं मिला",
+    "templateArchived": "यह ऑनबोर्डिंग टेम्पलेट संग्रहीत है",
+    "assignmentNotFound": "ऑनबोर्डिंग असाइनमेंट नहीं मिला",
+    "progressNotFound": "ऑनबोर्डिंग कार्य नहीं मिला"
+  },
+  "calibration": {
+    "sessionNotFound": "कैलिब्रेशन सत्र नहीं मिला",
+    "alreadyCompleted": "यह कैलिब्रेशन सत्र पहले ही पूर्ण है",
+    "sessionLocked": "सत्र पूर्ण होने के बाद प्रतिभागियों को बदला नहीं जा सकता",
+    "participantExists": "यह कर्मचारी पहले से प्रतिभागी है",
+    "participantNotFound": "कैलिब्रेशन प्रतिभागी नहीं मिला",
+    "finalRatingLocked": "सत्र पूर्ण होने के बाद अंतिम रेटिंग अपरिवर्तनीय हैं",
+    "missingFinalRatings": "सत्र पूर्ण करने से पहले प्रत्येक प्रतिभागी को अंतिम रेटिंग चाहिए"
+  },
+  "documents": {
+    "templateNotFound": "दस्तावेज़ टेम्पलेट नहीं मिला",
+    "templateArchived": "यह दस्तावेज़ टेम्पलेट संग्रहीत है",
+    "noRecipients": "कम से कम एक प्राप्तकर्ता चुनें",
+    "recipientNotFound": "कोई मेल खाता प्राप्तकर्ता नहीं मिला",
+    "documentNotFound": "दस्तावेज़ नहीं मिला",
+    "alreadyAcknowledged": "इस दस्तावेज़ की पुष्टि पहले ही हो चुकी है",
+    "expired": "यह दस्तावेज़ समाप्त हो गया है और अब पुष्टि नहीं की जा सकती"
+  },
+  "integrations": {
+    "apiKeyNotFound": "API कुंजी नहीं मिली",
+    "webhookNotFound": "वेबहुक नहीं मिला",
+    "invalidWebhookUrl": "वेबहुक URL एक मान्य HTTP(S) URL होना चाहिए",
+    "noEvents": "वेबहुक को कम से कम एक इवेंट की सदस्यता दें"
   }
 }

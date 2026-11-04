@@ -41,6 +41,23 @@ const U = {
   reports: { read: 'View reports', export: 'Export reports' },
   admin: { settings: 'Edit system settings', audit: 'View audit logs' },
   system: { health: 'Check health', metrics: 'View metrics' },
+  one_on_ones: { read: 'View own one-on-one meetings', manage: 'Manage one-on-one series and agendas' },
+  surveys: { read: 'View engagement surveys', manage: 'Create and manage surveys', respond: 'Respond to surveys' },
+  time_off: {
+    read: 'View time off policies and calendar',
+    manage: 'Manage leave types, holidays and balances',
+    request: 'Submit and cancel own leave requests',
+    approve: 'Approve or reject leave requests',
+  },
+  compensation: {
+    read: 'View own compensation',
+    manage: 'Manage compensation bands and records',
+    approve: 'Run pay review cycles and approve decisions',
+  },
+  onboarding: { read: 'View onboarding assignments', manage: 'Manage onboarding templates and assignments' },
+  calibration: { read: 'View calibration sessions', manage: 'Manage calibration sessions and 9-box ratings' },
+  documents: { read: 'View own documents', manage: 'Manage document templates and send documents' },
+  integrations: { read: 'View API keys and webhooks', manage: 'Manage API keys and webhooks' },
 } as const;
 
 export const PERMISSION_LIST: PermissionDefinition[] = [
@@ -63,6 +80,14 @@ export const PERMISSION_LIST: PermissionDefinition[] = [
   ...all('reports', ['read', 'export'], U.reports),
   ...all('admin', ['settings', 'audit'], U.admin),
   ...all('system', ['health', 'metrics'], U.system),
+  ...all('one_on_ones', ['read', 'manage'], U.one_on_ones),
+  ...all('surveys', ['read', 'manage', 'respond'], U.surveys),
+  ...all('time_off', ['read', 'manage', 'request', 'approve'], U.time_off),
+  ...all('compensation', ['read', 'manage', 'approve'], U.compensation),
+  ...all('onboarding', ['read', 'manage'], U.onboarding),
+  ...all('calibration', ['read', 'manage'], U.calibration),
+  ...all('documents', ['read', 'manage'], U.documents),
+  ...all('integrations', ['read', 'manage'], U.integrations),
 ];
 
 export const ALL_PERMISSION_KEYS = PERMISSION_LIST.map((p) => p.key);
@@ -101,6 +126,14 @@ export const ROLE_SEED: Record<RoleKey, { name: string; description: string; per
       'notifications:read',
       'reports:read', 'reports:export',
       'admin:settings', 'admin:audit',
+      'one_on_ones:read', 'one_on_ones:manage',
+      'surveys:read', 'surveys:manage', 'surveys:respond',
+      'time_off:read', 'time_off:manage', 'time_off:request', 'time_off:approve',
+      'compensation:read', 'compensation:manage', 'compensation:approve',
+      'onboarding:read', 'onboarding:manage',
+      'calibration:read', 'calibration:manage',
+      'documents:read', 'documents:manage',
+      'integrations:read', 'integrations:manage',
     ],
   },
   manager: {
@@ -119,6 +152,13 @@ export const ROLE_SEED: Record<RoleKey, { name: string; description: string; per
       'recognitions:read', 'recognitions:create',
       'notifications:read',
       'reports:read',
+      'one_on_ones:read', 'one_on_ones:manage',
+      'surveys:read', 'surveys:respond',
+      'time_off:read', 'time_off:request', 'time_off:approve',
+      'compensation:read',
+      'onboarding:read',
+      'calibration:read',
+      'documents:read',
     ],
   },
   employee: {
@@ -132,6 +172,12 @@ export const ROLE_SEED: Record<RoleKey, { name: string; description: string; per
       'competencies:read', 'competencies:assess',
       'recognitions:read', 'recognitions:create',
       'notifications:read',
+      'one_on_ones:read',
+      'surveys:read', 'surveys:respond',
+      'time_off:read', 'time_off:request',
+      'compensation:read',
+      'onboarding:read',
+      'documents:read',
     ],
   },
 };

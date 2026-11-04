@@ -1,0 +1,226 @@
+// Design tokens for every supported theme.
+// The settings store writes `data-theme` on <html>; `.dark` is toggled for
+// dark-based themes so Element Plus dark variables apply as a baseline.
+
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --pms-color-bg: #f6f8fb;
+  --pms-color-surface: #ffffff;
+  --pms-color-surface-muted: #f1f5f9;
+  --pms-color-surface-raised: #ffffff;
+  --pms-color-border: #e2e8f0;
+  --pms-color-border-strong: #cbd5e1;
+  --pms-color-text: #0f172a;
+  --pms-color-text-muted: #64748b;
+  --pms-color-primary: #2563eb;
+  --pms-color-primary-hover: #1d4ed8;
+  --pms-color-primary-soft: #dbeafe;
+  --pms-color-on-primary: #ffffff;
+  --pms-color-code-bg: #f1f5f9;
+  --pms-color-success-bg: #dcfce7;
+  --pms-color-success-text: #166534;
+  --pms-color-danger-bg: #fee2e2;
+  --pms-color-danger-text: #991b1b;
+  --pms-color-warning-bg: #fef3c7;
+  --pms-color-warning-text: #92400e;
+
+  --pms-header-bg: rgba(255, 255, 255, 0.85);
+  --pms-sidebar-bg: #0f172a;
+  --pms-sidebar-text: #e2e8f0;
+  --pms-sidebar-muted: #94a3b8;
+  --pms-sidebar-active-bg: rgba(37, 99, 235, 0.22);
+  --pms-sidebar-active-text: #ffffff;
+
+  --pms-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --pms-shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --pms-focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.35);
+  --pms-radius: 10px;
+
+  --el-color-primary: #2563eb;
+  --el-color-primary-light-3: #60a5fa;
+  --el-color-primary-light-5: #93c5fd;
+  --el-color-primary-light-7: #bfdbfe;
+  --el-color-primary-light-8: #dbeafe;
+  --el-color-primary-light-9: #eff6ff;
+  --el-color-primary-dark-2: #1d4ed8;
+  --el-bg-color: #ffffff;
+  --el-bg-color-page: #f6f8fb;
+  --el-text-color-primary: #0f172a;
+  --el-text-color-regular: #334155;
+  --el-border-color: #e2e8f0;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --pms-color-bg: #0b1120;
+  --pms-color-surface: #111a2e;
+  --pms-color-surface-muted: #17233c;
+  --pms-color-surface-raised: #16213a;
+  --pms-color-border: #24334f;
+  --pms-color-border-strong: #33486b;
+  --pms-color-text: #e6edf7;
+  --pms-color-text-muted: #94a3b8;
+  --pms-color-primary: #60a5fa;
+  --pms-color-primary-hover: #93c5fd;
+  --pms-color-primary-soft: rgba(96, 165, 250, 0.16);
+  --pms-color-on-primary: #06122a;
+  --pms-color-code-bg: #17233c;
+  --pms-color-success-bg: rgba(34, 197, 94, 0.16);
+  --pms-color-success-text: #86efac;
+  --pms-color-danger-bg: rgba(239, 68, 68, 0.16);
+  --pms-color-danger-text: #fca5a5;
+  --pms-color-warning-bg: rgba(245, 158, 11, 0.16);
+  --pms-color-warning-text: #fcd34d;
+
+  --pms-header-bg: rgba(11, 17, 32, 0.85);
+  --pms-sidebar-bg: #070d1a;
+  --pms-sidebar-text: #dbe4f3;
+  --pms-sidebar-muted: #8fa0bb;
+  --pms-sidebar-active-bg: rgba(96, 165, 250, 0.18);
+  --pms-sidebar-active-text: #ffffff;
+
+  --pms-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --pms-shadow-md: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --pms-focus-ring: 0 0 0 3px rgba(96, 165, 250, 0.45);
+  --pms-radius: 10px;
+
+  --el-color-primary: #60a5fa;
+  --el-color-primary-light-3: #3b82f6;
+  --el-color-primary-light-5: #2563eb;
+  --el-color-primary-light-7: #1d4ed8;
+  --el-color-primary-light-8: #1e40af;
+  --el-color-primary-light-9: #172554;
+  --el-color-primary-dark-2: #93c5fd;
+  --el-bg-color: #111a2e;
+  --el-bg-color-page: #0b1120;
+  --el-bg-color-overlay: #16213a;
+  --el-text-color-primary: #e6edf7;
+  --el-text-color-regular: #c3cfe2;
+  --el-border-color: #24334f;
+  --el-border-color-light: #1c2942;
+  --el-fill-color-blank: #111a2e;
+}
+
+:root[data-theme='midnight'] {
+  color-scheme: dark;
+
+  --pms-color-bg: #04060f;
+  --pms-color-surface: #0a1024;
+  --pms-color-surface-muted: #111a38;
+  --pms-color-surface-raised: #101a36;
+  --pms-color-border: #1e2b52;
+  --pms-color-border-strong: #33427a;
+  --pms-color-text: #e8e9ff;
+  --pms-color-text-muted: #a0a8cf;
+  --pms-color-primary: #a78bfa;
+  --pms-color-primary-hover: #c4b5fd;
+  --pms-color-primary-soft: rgba(167, 139, 250, 0.18);
+  --pms-color-on-primary: #120a2e;
+  --pms-color-code-bg: #111a38;
+  --pms-color-success-bg: rgba(45, 212, 191, 0.16);
+  --pms-color-success-text: #5eead4;
+  --pms-color-danger-bg: rgba(251, 113, 133, 0.16);
+  --pms-color-danger-text: #fda4af;
+  --pms-color-warning-bg: rgba(251, 191, 36, 0.16);
+  --pms-color-warning-text: #fde68a;
+
+  --pms-header-bg: rgba(4, 6, 15, 0.85);
+  --pms-sidebar-bg: #030510;
+  --pms-sidebar-text: #dcdcff;
+  --pms-sidebar-muted: #8b93c4;
+  --pms-sidebar-active-bg: rgba(167, 139, 250, 0.2);
+  --pms-sidebar-active-text: #ffffff;
+
+  --pms-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.55);
+  --pms-shadow-md: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --pms-focus-ring: 0 0 0 3px rgba(167, 139, 250, 0.5);
+  --pms-radius: 12px;
+
+  --el-color-primary: #a78bfa;
+  --el-color-primary-light-3: #8b5cf6;
+  --el-color-primary-light-5: #7c3aed;
+  --el-color-primary-light-7: #6d28d9;
+  --el-color-primary-light-8: #5b21b6;
+  --el-color-primary-light-9: #2e1065;
+  --el-color-primary-dark-2: #c4b5fd;
+  --el-bg-color: #0a1024;
+  --el-bg-color-page: #04060f;
+  --el-bg-color-overlay: #101a36;
+  --el-text-color-primary: #e8e9ff;
+  --el-text-color-regular: #c5c9ee;
+  --el-border-color: #1e2b52;
+  --el-border-color-light: #172142;
+  --el-fill-color-blank: #0a1024;
+}
+
+:root[data-theme='high-contrast'] {
+  color-scheme: dark;
+
+  --pms-color-bg: #000000;
+  --pms-color-surface: #000000;
+  --pms-color-surface-muted: #101010;
+  --pms-color-surface-raised: #0a0a0a;
+  --pms-color-border: #ffffff;
+  --pms-color-border-strong: #ffffff;
+  --pms-color-text: #ffffff;
+  --pms-color-text-muted: #e6e6e6;
+  --pms-color-primary: #ffe600;
+  --pms-color-primary-hover: #fff45c;
+  --pms-color-primary-soft: #1a1a00;
+  --pms-color-on-primary: #000000;
+  --pms-color-code-bg: #101010;
+  --pms-color-success-bg: #002200;
+  --pms-color-success-text: #7dff7d;
+  --pms-color-danger-bg: #2a0000;
+  --pms-color-danger-text: #ff8a8a;
+  --pms-color-warning-bg: #2a1e00;
+  --pms-color-warning-text: #ffd34d;
+
+  --pms-header-bg: #000000;
+  --pms-sidebar-bg: #000000;
+  --pms-sidebar-text: #ffffff;
+  --pms-sidebar-muted: #e6e6e6;
+  --pms-sidebar-active-bg: #ffe600;
+  --pms-sidebar-active-text: #000000;
+
+  --pms-shadow-sm: none;
+  --pms-shadow-md: none;
+  --pms-focus-ring: 0 0 0 4px #ffe600;
+  --pms-radius: 2px;
+
+  --el-color-primary: #ffe600;
+  --el-color-primary-light-3: #ffe600;
+  --el-color-primary-light-5: #d4bf00;
+  --el-color-primary-light-7: #a69400;
+  --el-color-primary-light-8: #7a6c00;
+  --el-color-primary-light-9: #1a1a00;
+  --el-color-primary-dark-2: #fff45c;
+  --el-bg-color: #000000;
+  --el-bg-color-page: #000000;
+  --el-bg-color-overlay: #0a0a0a;
+  --el-text-color-primary: #ffffff;
+  --el-text-color-regular: #ffffff;
+  --el-border-color: #ffffff;
+  --el-border-color-light: #ffffff;
+  --el-fill-color-blank: #000000;
+}
+
+// High contrast and reduced motion affordances.
+:root[data-theme='high-contrast'] :focus-visible {
+  outline: 3px solid var(--pms-color-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

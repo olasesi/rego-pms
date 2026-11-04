@@ -18,6 +18,14 @@ import notificationsRoutes from '../modules/notifications/notifications.routes';
 import reportsRoutes from '../modules/reports/reports.routes';
 import adminRoutes from '../modules/admin/admin.routes';
 import systemRoutes from '../modules/system/system.routes';
+import oneOnOnesRoutes from '../modules/oneOnOnes/oneOnOnes.routes';
+import surveysRoutes from '../modules/surveys/surveys.routes';
+import timeOffRoutes from '../modules/timeOff/timeOff.routes';
+import compensationRoutes from '../modules/compensation/compensation.routes';
+import onboardingRoutes from '../modules/onboarding/onboarding.routes';
+import calibrationRoutes from '../modules/calibration/calibration.routes';
+import documentsRoutes from '../modules/documents/documents.routes';
+import integrationsRoutes from '../modules/integrations/integrations.routes';
 
 export const routes: Router = Router();
 
@@ -40,5 +48,13 @@ routes.use('/notifications', notificationsRoutes);
 routes.use('/reports', reportsRoutes);
 routes.use('/admin', adminRoutes);
 routes.use('/system', systemRoutes);
+routes.use('/one-on-ones', oneOnOnesRoutes);
+routes.use('/surveys', surveysRoutes);
+routes.use('/time-off', timeOffRoutes);
+routes.use('/compensation', compensationRoutes);
+routes.use('/onboarding', onboardingRoutes);
+routes.use('/calibration', calibrationRoutes);
+routes.use('/documents', documentsRoutes);
+routes.use('/integrations', integrationsRoutes);
 
 export default routes;

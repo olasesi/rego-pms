@@ -1,0 +1,71 @@
+{
+  "app": {
+    "name": "绩效管理系统",
+    "shortName": "PMS",
+    "tagline": "人员、目标与成长，尽在一处"
+  },
+  "nav": {
+    "home": "首页",
+    "goals": "目标与 OKR",
+    "reviews": "绩效评估",
+    "feedback": "反馈",
+    "oneOnOnes": "一对一沟通",
+    "surveys": "问卷调查",
+    "people": "人员",
+    "insights": "分析",
+    "admin": "管理",
+    "comingSoon": "即将推出"
+  },
+  "header": {
+    "searchPlaceholder": "搜索人员、目标、评估…",
+    "language": "语言",
+    "theme": "主题",
+    "notifications": "通知",
+    "profile": "个人资料",
+    "toggleMenu": "切换导航"
+  },
+  "theme": {
+    "light": "浅色",
+    "dark": "深色",
+    "midnight": "午夜",
+    "highContrast": "高对比度",
+    "system": "跟随系统"
+  },
+  "home": {
+    "badge": "基础框架已就绪",
+    "title": "让绩效保持一致。",
+    "subtitle": "目标、评估、反馈与人员运营，汇聚于一个包容的工作空间。",
+    "note": "应用框架、主题、国际化和 API 客户端已安装。功能页面将在下一阶段推出。",
+    "env": "环境",
+    "api": "API 基础 URL",
+    "modulesTitle": "每项能力对应一个模块",
+    "modulesSubtitle": "每项能力只有一个标准归属——不重复功能。"
+  },
+  "modules": {
+    "goals": "目标与 OKR",
+    "reviews": "绩效评估",
+    "feedback": "持续反馈",
+    "oneOnOnes": "一对一沟通",
+    "surveys": "敬业度调查",
+    "timeOff": "休假",
+    "compensation": "薪酬",
+    "onboarding": "入职",
+    "calibration": "校准",
+    "documents": "文档",
+    "analytics": "分析",
+    "integrations": "集成"
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "description": "您要查找的页面不存在或已被移动。",
+    "back": "返回首页"
+  },
+  "common": {
+    "loading": "加载中…",
+    "retry": "重试",
+    "cancel": "取消",
+    "save": "保存",
+    "search": "搜索",
+    "error": "出现问题"
+  }
+}

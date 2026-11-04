@@ -7,7 +7,8 @@
     "forbidden": "Vous n'avez pas la permission d'effectuer cette action",
     "serverError": "Une erreur inattendue est survenue. Veuillez réessayer plus tard.",
     "invalidId": "Identifiant invalide",
-    "required": "{{field}} est requis"
+    "required": "{{field}} est requis",
+    "invalidRequest": "La demande n'a pas pu être traitée pour cette organisation"
   },
   "validation": {
     "failed": "La validation a échoué",
@@ -136,5 +137,70 @@
     "ok": "Le service est opérationnel",
     "unavailable": "Le service est indisponible",
     "notFound": "Route introuvable"
+  },
+  "oneOnOne": {
+    "notFound": "Série de tête-à-tête introuvable",
+    "meetingNotFound": "Réunion individuelle introuvable",
+    "agendaItemNotFound": "Point d'ordre du jour introuvable"
+  },
+  "survey": {
+    "notFound": "Sondage introuvable",
+    "questionNotFound": "Question du sondage introuvable",
+    "noQuestions": "Ajoutez au moins une question avant de lancer le sondage",
+    "notActive": "Ce sondage n'accepte pas de réponses actuellement",
+    "alreadySubmitted": "Vous avez déjà répondu à ce sondage",
+    "requiredAnswer": "Une question obligatoire n'a pas reçu de réponse"
+  },
+  "timeOff": {
+    "leaveTypeNotFound": "Type de congé introuvable",
+    "holidayNotFound": "Jour férié introuvable",
+    "invalidDates": "Les dates fournies sont invalides",
+    "invalidRange": "La date de fin doit être postérieure ou égale à la date de début",
+    "noWorkingDays": "La période sélectionnée ne contient aucun jour ouvré",
+    "insufficientBalance": "Solde de congés insuffisant pour cette demande",
+    "requestNotFound": "Demande de congé introuvable",
+    "notPending": "Cette demande de congé n'est plus en attente"
+  },
+  "compensation": {
+    "bandNotFound": "Grille salariale introuvable",
+    "invalidBand": "Le minimum, le médian et le maximum de la grille sont incohérents",
+    "recordNotFound": "Élément de rémunération introuvable",
+    "payReviewNotFound": "Cycle de revue salariale introuvable",
+    "cycleClosed": "Ce cycle de revue salariale est clôturé",
+    "decisionExists": "Une décision existe déjà pour cet employé",
+    "decisionNotFound": "Décision de revue salariale introuvable",
+    "decisionLocked": "Cette décision est verrouillée et ne peut pas être modifiée",
+    "pendingDecisions": "Toutes les décisions doivent être traitées avant de clôturer le cycle"
+  },
+  "onboarding": {
+    "templateNotFound": "Modèle d'intégration introuvable",
+    "taskNotFound": "Tâche du modèle d'intégration introuvable",
+    "templateArchived": "Ce modèle d'intégration est archivé",
+    "assignmentNotFound": "Affectation d'intégration introuvable",
+    "progressNotFound": "Tâche d'intégration introuvable"
+  },
+  "calibration": {
+    "sessionNotFound": "Session de calibration introuvable",
+    "alreadyCompleted": "Cette session de calibration est déjà terminée",
+    "sessionLocked": "Les participants ne peuvent plus être modifiés après la clôture de la session",
+    "participantExists": "Cet employé participe déjà",
+    "participantNotFound": "Participant à la calibration introuvable",
+    "finalRatingLocked": "Les notes finales sont immuables après la clôture de la session",
+    "missingFinalRatings": "Chaque participant doit avoir une note finale avant de clôturer la session"
+  },
+  "documents": {
+    "templateNotFound": "Modèle de document introuvable",
+    "templateArchived": "Ce modèle de document est archivé",
+    "noRecipients": "Sélectionnez au moins un destinataire",
+    "recipientNotFound": "Aucun destinataire correspondant trouvé",
+    "documentNotFound": "Document introuvable",
+    "alreadyAcknowledged": "Ce document a déjà été accusé réception",
+    "expired": "Ce document a expiré et ne peut plus être accusé réception"
+  },
+  "integrations": {
+    "apiKeyNotFound": "Clé d'API introuvable",
+    "webhookNotFound": "Webhook introuvable",
+    "invalidWebhookUrl": "L'URL du webhook doit être une URL HTTP(S) valide",
+    "noEvents": "Abonnez le webhook à au moins un événement"
   }
 }

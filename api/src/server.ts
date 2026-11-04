@@ -6,12 +6,16 @@ import { sequelize } from './config/database';
 import { disposeRedis } from './config/redis';
 import { initDatabase } from './bootstrap';
 import { startJobs } from './jobs';
+import { startQueueWorker, stopQueue } from './queues';
 
 export const bootstrap = async (): Promise<http.Server> => {
   await initDatabase({ sync: true, alter: false });
+  startQueueWorker();
   const server = createApp().listen(config.PORT, config.HOST, () => {
     log.info(`PMS API listening on http://${config.HOST}:${config.PORT}`);
-    log.info(`Database ${config.DB_NAME} ready, documentation at http://localhost:${config.PORT}/docs`);
+    log.info(
+      `Database ${config.DB_NAME} ready — REST docs at /docs, GraphQL at /graphql, metrics at /metrics`,
+    );
   });
 
   return server;
@@ -21,6 +25,7 @@ const serverShutdown = (server: http.Server, code = 0): void => {
   log.info('Shutting down gracefully...');
   server.close(async () => {
     try {
+      await stopQueue();
       await Promise.all([sequelize.close(), disposeRedis()]);
       log.info('Shutdown complete');
       process.exit(code);

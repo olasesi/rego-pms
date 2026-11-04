@@ -7,7 +7,8 @@
     "forbidden": "您没有权限执行此操作",
     "serverError": "发生意外错误，请稍后重试。",
     "invalidId": "无效的标识符",
-    "required": "{{field}} 为必填项"
+    "required": "{{field}} 为必填项",
+    "invalidRequest": "无法为该组织处理此请求"
   },
   "validation": {
     "failed": "验证失败",
@@ -136,5 +137,70 @@
     "ok": "服务正常",
     "unavailable": "服务不可用",
     "notFound": "路由未找到"
+  },
+  "oneOnOne": {
+    "notFound": "一对一会议系列未找到",
+    "meetingNotFound": "一对一会议未找到",
+    "agendaItemNotFound": "议程项目未找到"
+  },
+  "survey": {
+    "notFound": "调查未找到",
+    "questionNotFound": "调查问题未找到",
+    "noQuestions": "启动调查前请至少添加一个问题",
+    "notActive": "此调查当前不接受回复",
+    "alreadySubmitted": "您已回复过此调查",
+    "requiredAnswer": "必答问题尚未回答"
+  },
+  "timeOff": {
+    "leaveTypeNotFound": "休假类型未找到",
+    "holidayNotFound": "节假日未找到",
+    "invalidDates": "提供的日期无效",
+    "invalidRange": "结束日期必须等于或晚于开始日期",
+    "noWorkingDays": "所选范围内没有工作日",
+    "insufficientBalance": "此申请的休假余额不足",
+    "requestNotFound": "休假申请未找到",
+    "notPending": "此休假申请已不再待处理"
+  },
+  "compensation": {
+    "bandNotFound": "薪酬区间未找到",
+    "invalidBand": "薪酬区间的最低、中位和最高值不一致",
+    "recordNotFound": "薪酬记录未找到",
+    "payReviewNotFound": "调薪周期未找到",
+    "cycleClosed": "此调薪周期已关闭",
+    "decisionExists": "该员工已有调薪决定",
+    "decisionNotFound": "调薪决定未找到",
+    "decisionLocked": "此决定已锁定，无法更改",
+    "pendingDecisions": "关闭周期前必须处理所有决定"
+  },
+  "onboarding": {
+    "templateNotFound": "入职模板未找到",
+    "taskNotFound": "入职模板任务未找到",
+    "templateArchived": "此入职模板已归档",
+    "assignmentNotFound": "入职任务分配未找到",
+    "progressNotFound": "入职任务未找到"
+  },
+  "calibration": {
+    "sessionNotFound": "校准会议未找到",
+    "alreadyCompleted": "此校准会议已完成",
+    "sessionLocked": "会议完成后无法更改参与者",
+    "participantExists": "该员工已是参与者",
+    "participantNotFound": "校准参与者未找到",
+    "finalRatingLocked": "会议完成后最终评级不可更改",
+    "missingFinalRatings": "完成会议前每位参与者都需要最终评级"
+  },
+  "documents": {
+    "templateNotFound": "文档模板未找到",
+    "templateArchived": "此文档模板已归档",
+    "noRecipients": "请至少选择一位收件人",
+    "recipientNotFound": "未找到匹配的收件人",
+    "documentNotFound": "文档未找到",
+    "alreadyAcknowledged": "此文档已确认",
+    "expired": "此文档已过期，无法再确认"
+  },
+  "integrations": {
+    "apiKeyNotFound": "API 密钥未找到",
+    "webhookNotFound": "Webhook 未找到",
+    "invalidWebhookUrl": "Webhook URL 必须是有效的 HTTP(S) URL",
+    "noEvents": "请为 Webhook 订阅至少一个事件"
   }
 }
